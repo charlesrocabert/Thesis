@@ -1,0 +1,101 @@
+
+In this appendix, we present in more details the numerical solver of {\sigmaFGM}. We assume that the reader is aware of the basic definitions and equations provided in the main manuscript.
+
+To estimate the evolution of the population distribution $n(\boldsymbol{\mu}, \boldsymbol{\sigma}, \boldsymbol{\theta})$ through time, we simulated the stochastic branching process associated to {\sigmaFGM} equations (as discussed in Methods). Once initial conditions are defined (Table \ref{part1:appendixS2:table1}), the evolutionary trajectory of $n(\boldsymbol{\mu}, \boldsymbol{\sigma}, \boldsymbol{\theta})$ is simulated through time using Algorithm \ref{part1:appendixS2:algorithm1}, which is similar to a time-adaptive tau-leaping algorithm \citep{gillespie-2007}.
+
+%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%
+
+\section*{Parameters of the numerical solver}
+
+\begin{table}[!ht]
+\begin{adjustwidth}{-0in}{0in}
+\centering
+\caption{List of parameters of the numerical solver for {\sigmaFGM}.}
+\begin{tabular}{|l|c|c|}
+\hline
+Variable & Symbol & Domain\\
+\hline
+Number of particles & N & $[1, +\infty]$\\
+Number of phenotypic characters (or dimensions) & n & $[1, +\infty]$\\
+Initial mean phenotype vector & $\boldsymbol{\mu_0}$ & $\mathbb{R}^n$\\
+Initial $\boldsymbol{\Sigma}$ eigenvalues vector & $\boldsymbol{\sigma_0}$ & $\mathbb{R}^{n}$\\
+Initial $\boldsymbol{\Sigma}$ rotation angles vector & $\boldsymbol{\theta_0}$ & $\mathbb{R}^{n(n-1)/2}$\\
+$\boldsymbol{\mu}$ values mutation size standard deviation & $s_\mu$ & $\geq 0$\\
+$\boldsymbol{\sigma}$ values mutation size standard deviation & $s_\sigma$ & $\geq 0$\\
+$\boldsymbol{\theta}$ values mutation size standard deviation & $s_\theta$ & $\geq 0$\\
+\hline
+\end{tabular}
+\begin{flushleft}
+These parameters must be set to initialize a stochastic branching process simulation.
+\end{flushleft}
+\label{part1:appendixS2:table1}
+\end{adjustwidth}
+\end{table}
+
+%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%
+
+\section*{Code availability}
+
+The code of the numerical solver and parameter exploration scripts is freely available in Script \ref{part1:ScriptS1}, and is distributed under the open source GNU General Public License.
+
+\newpage
+
+%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%
+
+\section*{Main algorithm of the numerical solver}
+
+\begin{algorithm}[!ht]
+\KwData{Set initial conditions (Table \ref{part1:appendixS2:table1}); Set $N$ particles with the same initial parameters $\boldsymbol{\mu_0}$, $\boldsymbol{\sigma_0}$ and $\boldsymbol{\theta_0}$.}
+\KwResult{Evolution through time of the population distribution $n(\boldsymbol{\mu}, \boldsymbol{\sigma}, \boldsymbol{\theta})$.}
+$t = 0$\;
+$N_t = N$\;
+\While{Stop criteria not reached}{
+	$W_{max} = \max(W_i)$, for $i \in [0,N]$\;
+	$dt = 0.1/W_{max}$\;
+	\For{$i = 1\ ...\ N$}{
+		\If{uniform\_draw(0,1) $ < W_i \times dt$}{
+			$i'$ = Duplicate($i$)\;
+			Mutate($i'$)\;
+			$\boldsymbol{z_i}$ = multivariate\_normal\_draw($\boldsymbol{\mu_i},\boldsymbol{\Sigma_i}$)\;
+			$W_i = W(\boldsymbol{z_i})$\;
+			$N_t = N_t+1$\;
+		}
+	}
+	$p_{death} = \max \left(0, (N_t-N)/N_t \right)$\;
+	\For{$i = 1\ ...\ N$}{
+		\If{uniform\_draw(0,1) $ < p_{death}$}{
+			Kill($i$)\;
+			$N_t = N_t-1$\;
+		}
+	}
+	$t = t+dt$\;
+	Compute\_moments()\;
+	Compute\_statistics()\;
+}
+\caption{Main algorithm of the numerical solver of {\sigmaFGM}. This algorithm simulates the stochastic branching process associated to the equations of {\sigmaFGM}. In this algorithm, similar to a tau-leaping algorithm, the timestep $dt$ is not fixed and depends on the best organism's fitness $W_{max}$ at time $t$. This method is used to avoid long periods with no branching events (usually when population fitness is very low). Thus, the time scale is rescaled to set the proliferation rate of the best particle at 0.1: at each simulation time-step, $dt = 0.1/W_{max}$. The population size $N_t$ is also regulated by recomputing the death probability $p_{death}$ at each time-step such that $p_{death} = \max \left(0, (N_t-N)/N_t \right)$. Finally, at each time-step, the two first moments of $n(\boldsymbol{\mu}, \boldsymbol{\sigma}, \boldsymbol{\theta})$ are computed to extract the evolutionary trajectory, as well as the maximal eigenvalue, the maximal eigenvalue contribution and the maximal eigenvector correlation.}
+\label{part1:appendixS2:algorithm1}
+\end{algorithm}
+
+%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%
+
+\section*{Parametric exploration for a single phenotypic character.}
+
+We performed a parametric exploration in the space $(\mu,\sigma)$ at a high resolution. More precisely, we computed the integrals in $\partial \overline{W}(\mu,\sigma)/\partial \sigma$ and $\partial \overline{W}(\mu,\sigma)/\partial \mu$ using the numerical method of Gauss-Kronrod adaptive integration on infinite intervals (QAGI) provided by the Gnu Scientific Library. We explored $\mu$ and $\sigma$ between 0 and 10, with a step of 0.01, thus representing the computation of $10^6$ points. We only explored $\mu \geq 0$ since the model is symmetric for $\mu < 0$ and $\mu > 0$.
+
+We used the data to numerically find the ridge $\partial \overline{W}(\mu,\sigma)/\partial \sigma=0$, and the $\overline{W}(\mu,\sigma)$ gradient in the space $(\mu,\sigma)$.
+
+%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%
+
+\section*{Parametric exploration for an isotropic noise in $n$ dimensions}
+
+We also performed a parametric exploration in the space $(\boldsymbol{\mu},\sigma)$ at a high resolution. We computed the integral $\partial \overline{W}(\boldsymbol{\mu},\sigma)/\partial \sigma$ using the numerical method of Gauss-Kronrod adaptive integration on infinite intervals (QAGI) provided by the Gnu Scientific Library.
+
+We explored $\mu_1$ (all other $\mu_i, i \in \{2,\dots,n\}$ being equal to 0) and $\sigma$ between 0 and 10, with a step of 0.05, from $n=1$ to $n=50$, thus representing the computation of $2.10^6$ points. We only explored $\mu_1 \geq 0$ since the model is symmetric for $\mu_1 < 0$ and $\mu_1 > 0$.
+
+We used the data to find numerically the ridge $\partial \overline{W}(\boldsymbol{\mu},\sigma)/\partial \sigma=0$ for each dimension, and the $\overline{W}(\boldsymbol{\mu},\sigma)$ gradient in the space $(\boldsymbol{\mu},\sigma)$.
+

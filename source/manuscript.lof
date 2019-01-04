@@ -1,0 +1,68 @@
+\select@language {english}
+\select@language {english}
+\contentsline {figure}{\numberline {1}{\ignorespaces An example of complex ecosystem.}}{27}{figure.caption.10}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {I.1}{\ignorespaces Variation and selection at the heart of Darwinian evolution.}}{30}{figure.caption.11}
+\contentsline {figure}{\numberline {I.2}{\ignorespaces Long-term evolution leads to evolution of evolution.}}{31}{figure.caption.15}
+\contentsline {figure}{\numberline {I.3}{\ignorespaces Evolution on the genotype network for a robust organism.}}{34}{figure.caption.16}
+\contentsline {figure}{\numberline {I.4}{\ignorespaces Proof-of-concept modeling and the scientific method.}}{37}{figure.caption.17}
+\contentsline {figure}{\numberline {I.5}{\ignorespaces The beneficial value of a mutation in FGM depends on its size.}}{41}{figure.caption.18}
+\contentsline {figure}{\numberline {I.6}{\ignorespaces In vivo and in silico evolution experiments.}}{43}{figure.caption.19}
+\contentsline {figure}{\numberline {I.7}{\ignorespaces A description of {\ae vol} model.}}{45}{figure.caption.20}
+\contentsline {figure}{\numberline {I.8}{\ignorespaces A description of the Virtual Cell model.}}{47}{figure.caption.21}
+\contentsline {figure}{\numberline {I.9}{\ignorespaces A general framework for the bag-of-tuples formalism.}}{49}{figure.caption.22}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {II.1}{\ignorespaces Yeast intra-strain phenotypic noise is correlated in Fisher's space.}}{63}{figure.caption.33}
+\contentsline {figure}{\numberline {II.2}{\ignorespaces Three successive approaches to model phenotypic noise in Fisher's geometric model.}}{64}{figure.caption.34}
+\contentsline {figure}{\numberline {II.3}{\ignorespaces Variations of the sub-population fitness $\overline {W}(\mu ,\sigma )$ depending on $\mu $ and $\sigma $ values.}}{65}{figure.caption.35}
+\contentsline {figure}{\numberline {II.4}{\ignorespaces Effects of phenotypic complexity on isotropic phenotypic noise fitness gain.}}{67}{figure.caption.36}
+\contentsline {figure}{\numberline {II.5}{\ignorespaces An evolvable anisotropic and correlated phenotypic noise speeds up evolution.}}{70}{figure.caption.37}
+\contentsline {figure}{\numberline {II.6}{\ignorespaces An example of the temporal dynamics in {$\sigma $\textsc {FGM}}.}}{74}{figure.2.6}
+\contentsline {figure}{\numberline {II.7}{\ignorespaces Step-by-step protocol used to analyze single-cell data.}}{80}{figure.2.7}
+\contentsline {figure}{\numberline {II.8}{\ignorespaces Ordered singular values contained in $\bm {\sigma }$.}}{81}{figure.2.8}
+\contentsline {figure}{\numberline {II.9}{\ignorespaces Mean phenotypic trait values per replicate per strain.}}{82}{figure.2.9}
+\contentsline {figure}{\numberline {II.10}{\ignorespaces Standard deviation of each phenotypic character per replicate per strain.}}{83}{figure.2.10}
+\contentsline {figure}{\numberline {II.11}{\ignorespaces Mean phenotypic noise correlations in the Fisher's space.}}{84}{figure.2.11}
+\contentsline {figure}{\numberline {II.12}{\ignorespaces Yeast intra-strain phenotypic noise is correlated in the Fisher's space.}}{85}{figure.2.12}
+\contentsline {figure}{\numberline {II.13}{\ignorespaces Behavior of $\partial \overline {W}(\mu ,\sigma )/\partial \mu $.}}{95}{figure.caption.57}
+\contentsline {figure}{\numberline {II.14}{\ignorespaces Variation of $\partial ^2 W(\mu ,\sigma )/\partial \sigma ^2$ when $\sigma \rightarrow 0$.}}{96}{figure.caption.58}
+\contentsline {figure}{\numberline {II.15}{\ignorespaces Variations of the mean fitness $\overline {W}(\mu ,\sigma )$ in the space $(\mu ,\sigma )$.}}{96}{figure.caption.59}
+\contentsline {figure}{\numberline {II.16}{\ignorespaces Anisotropic and correlated phenotypic noise for two traits.}}{103}{figure.caption.62}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {III.1}{\ignorespaces {\textsc {Evo\textsuperscript {2}Sim}} logo.\relax }}{110}{figure.3.1}
+\contentsline {figure}{\numberline {III.2}{\ignorespaces The Medawar zone.}}{111}{figure.caption.71}
+\contentsline {figure}{\numberline {III.3}{\ignorespaces Some examples of arrangements of genetic units forming functional or non-functional regions.}}{114}{figure.caption.73}
+\contentsline {figure}{\numberline {III.4}{\ignorespaces The four types of large rearrangements in {\textsc {Evo\textsuperscript {2}Sim}}.}}{117}{figure.caption.74}
+\contentsline {figure}{\numberline {III.5}{\ignorespaces The affinity of a transcription factor for a binding site depends on the distance between their respective tags.}}{118}{figure.caption.75}
+\contentsline {figure}{\numberline {III.6}{\ignorespaces The lactose operon.}}{120}{figure.caption.76}
+\contentsline {figure}{\numberline {III.7}{\ignorespaces An impossible-to-win fight against entropy.}}{122}{figure.caption.77}
+\contentsline {figure}{\numberline {III.8}{\ignorespaces A basic example of trophic network.}}{126}{figure.3.8}
+\contentsline {figure}{\numberline {III.9}{\ignorespaces Live update of lineage and phylogenetic trees.}}{127}{figure.caption.78}
+\contentsline {figure}{\numberline {III.10}{\ignorespaces Global picture of {\textsc {Evo\textsuperscript {2}Sim}}.}}{129}{figure.3.10}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {IV.1}{\ignorespaces Presentation of the model.}}{138}{figure.caption.87}
+\contentsline {figure}{\numberline {IV.2}{\ignorespaces Evolution of typical variables.}}{145}{figure.caption.88}
+\contentsline {figure}{\numberline {IV.3}{\ignorespaces Final best individuals of groups A and B, from repetition 10 of the periodic environment.}}{147}{figure.caption.91}
+\contentsline {figure}{\numberline {IV.4}{\ignorespaces Distribution of the Most Recent Common Ancestor age in all the simulations.}}{148}{figure.caption.94}
+\contentsline {figure}{\numberline {IV.5}{\ignorespaces Phylogenetic structure score against the MRCA age.}}{150}{figure.caption.95}
+\contentsline {figure}{\numberline {IV.6}{\ignorespaces Evolution of trophic profiles in the population for the continuous and periodic environments.}}{151}{figure.4.6}
+\contentsline {figure}{\numberline {IV.7}{\ignorespaces Analysis of the adaptive diversification event leading to the monophyletic ecotypes A and B.}}{153}{figure.caption.99}
+\contentsline {figure}{\numberline {IV.8}{\ignorespaces Frequency-dependent relative fitness in short-term competition experiments.}}{154}{figure.caption.101}
+\contentsline {figure}{\numberline {IV.9}{\ignorespaces Convergence to an oscillatory dynamics over 10 serial transfer cycles.}}{155}{figure.caption.103}
+\contentsline {figure}{\numberline {IV.10}{\ignorespaces Stability of the A/B interaction evolved in the periodic environment, when placed in the continuous one.}}{157}{figure.caption.107}
+\contentsline {figure}{\numberline {IV.11}{\ignorespaces Time before A/B interaction failure in the continuous environment.}}{158}{figure.caption.111}
+\contentsline {figure}{\numberline {IV.12}{\ignorespaces Loss of essential metabolites production of ecotype A organisms in the 10 repetitions of the late population 3 in the continuous environment assays.}}{160}{figure.caption.114}
+\contentsline {figure}{\numberline {IV.13}{\ignorespaces Final phylogenetic trees of each simulation.}}{167}{figure.caption.118}
+\contentsline {figure}{\numberline {IV.14}{\ignorespaces Evolution of the MRCA age during simulations, for the three types of environments.}}{168}{figure.caption.119}
+\contentsline {figure}{\numberline {IV.15}{\ignorespaces Loss of essential metabolites production of ecotype A organisms, in the 10 repetitions of the early population 3 in the continuous environment assays.}}{169}{figure.caption.120}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {V.1}{\ignorespaces Initial handcrafted genome codes for two auto-repressed operons.}}{181}{figure.caption.135}
+\contentsline {figure}{\numberline {V.2}{\ignorespaces Dynamics of initial digital organisms in environment A with null mutation rates.}}{182}{figure.caption.137}
+\contentsline {figure}{\numberline {V.3}{\ignorespaces Extinction time in environment A with null mutation rates.}}{183}{figure.caption.138}
+\contentsline {figure}{\numberline {V.4}{\ignorespaces Extinction time in environment A.}}{186}{figure.caption.139}
+\contentsline {figure}{\numberline {V.5}{\ignorespaces Two examples of evolved genome structures depending on protein production costs.}}{188}{figure.caption.142}
+\contentsline {figure}{\numberline {V.6}{\ignorespaces Evolution of genome and network structures in the lineage of an evolved organism in environment A with protein production costs.}}{189}{figure.caption.143}
+\contentsline {figure}{\numberline {V.7}{\ignorespaces Genetic regulation network and metabolic network of an evolved organism in environment A with protein production costs.}}{190}{figure.caption.144}
+\contentsline {figure}{\numberline {V.8}{\ignorespaces Cytoplasmic metabolic content of an evolved organism in environment A with protein production costs.}}{191}{figure.caption.145}
+\contentsline {figure}{\numberline {V.9}{\ignorespaces Structure of an evolved digital organism in environment B, with protein production costs.}}{193}{figure.caption.147}
+\addvspace {10\p@ }
